@@ -1,1065 +1,546 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Raj</title>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      rel="icon"
-      href="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/unnamed%20(4)-photoaidcom-cropped%20(1).png?alt=media&token=f99212d1-dc96-49fc-892a-70d286447547"
-      type="image/x-icon"
-    />
-    <link
-      rel="shortcut icon"
-      href="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/unnamed%20(4)-photoaidcom-cropped%20(1).png?alt=media&token=f99212d1-dc96-49fc-892a-70d286447547"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <style>
-    .cursor {
-      cursor: row-resize;
-    }
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Great+Vibes&family=Pacifico&family=Playfair+Display:ital@0;1&family=Savate:ital,wght@0,200..900;1,200..900&family=Sevillana&display=swap"
+        rel="stylesheet">
 
-    #btn {
-      position: relative;
-      background-color: rgba(210, 55, 55, 0.7);
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      backdrop-filter: blur(15px);
-      transition: all 0.3s ease;
-    }
 
-    #btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: inherit;
-      filter: blur(10px);
-      z-index: -1;
-    }
 
-    #btn:hover {
-      background-color: #0056b3;
-      transform: scale(1.1);
-    }
 
-    #btn:hover::before {
-      background-color: rgba(0, 86, 179, 0.7);
-    }
 
-    .image-container-wrapper {
-      text-align: center;
-    }
 
-    .loading-screen {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease-out;
-    }
 
-    .loading-screen.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-  </style>
 
-  <body>
-    <!-- <div id="loading-screen">
-    <div class="loader"></div>
-</div> -->
 
-    <div class="loading-screen" id="loading-screen">
-      <p style="color: rgb(0, 0, 0); font-size: 24px">Loading...</p>
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        body {
+            background: url('https://egs3h68r5ni.exactdn.com/wp-content/uploads/2020/03/Fantasy-forest-1080.jpg?strip=all&lossy=1&ssl=1') no-repeat center center fixed;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: transparent !important;
+            box-shadow: none;
+            border: none;
+        }
+
+        .all-center {
+            height: 20%;
+            padding: 50px 20px 50px 20px;
+        }
+
+        .transparentBack {
+            background-color: transparent !important;
+            box-shadow: none;
+            border: none;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            padding: 30px 30px 20px 30px;
+
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+
+
+            font-size: 60px;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            padding: 30px 30px 20px 30px;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 40px;
+
+        }
+
+
+
+
+        p {
+            color: white;
+        }
+
+        .card-text {
+            color: black;
+        }
+
+        .Card-size {
+            padding: 50px;
+
+        }
+
+        .form-center {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: 20px;
+             border-radius: 30px;
+        }
+
+        .form-in {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-size: 20px;
+            padding: 20px;
+            border-radius: 30px;
+            
+
+        }
+
+
+
+
+        
+    </style>
+
+
+</head>
+
+
+
+
+
+<html>
+
+<body>
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> Story </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row gap-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Theme
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                        <li><a class="dropdown-item" href="#">Motivational</a></li>
+                        <li><a class="dropdown-item" href="#">Sweet</a></li>
+                        <li><a class="dropdown-item" href="#">Moral</a></li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">ALL option</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus.html">Contact us</a>
+                </li>
+
+
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="heading_1">
+        <h1> 🍂⛩️ Choose Your house in fantasy World 🌟🍂 </h1>
+
+        <h2>🏰✨ Choose Your Dream Home in a Fantasy World! 🌈💖 <br>
+            “Magic begins where your heart feels at home.” 🌟🏡<br>
+
+            Will you live with ninjas in misty mountains? ⛰️🥷<br>
+            Dance with unicorns in candy skies? 🦄☁️<br>
+            Or bloom with glowing plants in desert sands? 🌵🌸🌙<br>
+
+            💫 **Pick the place your soul belongs.** 💭💖<br>
+            Slide the given box below ! To see Theme .
+        </h2>
     </div>
-    <script>
-      window.addEventListener("load", function () {
-        var loadingScreen = document.getElementById("loading-screen");
-        loadingScreen.classList.add("hidden");
-        setTimeout(function () {
-          loadingScreen.style.display = "none";
-        }, 500);
-      });
-    </script>
-    <header id="header">
-      <div class="container">
-        <!-- <a href="#header" class="cursor" >Home<b style="color: rgb(245, 122, 77); font-size: 28px;">;</b></a> -->
-        <a href="#home" class="cursor"
-          >About<b style="color: rgb(245, 122, 77); font-size: 28px">;</b></a
-        >
-        <a href="#proHead" class="cursor"
-          >Projects<b style="color: rgb(245, 122, 77); font-size: 28px">;</b></a
-        >
-        <a href="#achivements" class="cursor"
-          >Achivements<b style="color: rgb(245, 122, 77); font-size: 28px"
-            >;</b
-          ></a
-        >
-        <a href="#tictac" class="cursor"
-          >Game<b style="color: rgb(245, 122, 77); font-size: 28px">;</b></a
-        >
-        <a href="#contact" class="cursor"
-          >Contact<b style="color: rgb(245, 122, 77); font-size: 28px">;</b></a
-        >
-      </div>
 
-      <!-- <section class="slider">          
-          <div class="slides">
-            <div class="item active" id="slide1">
-              <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/memount.jpg?alt=media&token=c7bac570-567a-49d6-b694-3ad46cfb6465" alt="slide1" />
-                    <div class="text-overlay">
-                      <p>SELECT <span style="color: red;">*</span> FROM <span style="color: red;">World</span> WHERE <span style="color: red;">"Someone"</span> LIKE <span style="color: red;">"%You%"</span></p>
+
+
+
+
+
+    <div class="all-center">
+
+        <div class="custom-carousel-container">
+            <div class="container-fluid">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+
+
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://wallpapers.com/images/hd/magical-unicorn-2560-x-1600-ml0d2rt41yutlv11.jpg"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5> 🦄✨ Choose Unicorn Fantasy World to Stay🪄❤️</h5>
+                                <p>🦄✨ Welcome to the Unicorn Fantasy World 🧪🌈
+
+                                    Step into a magical realm where science meets sparkle! 🌟 This whimsical experiment
+                                    takes place in a land of floating islands, glittering rainbows, talking flowers 🌺,
+                                    and glowing crystal rivers 💎. Here, unicorns aren’t just mythical creatures—they’re
+                                    curious scientists! 🧪🦄
+
+                                    Watch as they mix shimmering potions 🌈, test moonbeam energy 🌙⚡, and discover the
+                                    secrets of rainbow dust in a lab made of candy clouds 🍭☁️. Each experiment bursts
+                                    with color, magic, and surprises—will they create a potion for flying? Or a portal
+                                    to the Dream Meadow? 🛸🌸
+
+                                    Get ready for a journey filled with wonder, imagination, and a little bit of sparkle
+                                    science! 🧚🔬🦄💖
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://external-preview.redd.it/h6eSuKPF_RUociTYnKodwWtsWknaEkfey2FUlaT6pqY.jpg?auto=webp&s=9532368f9fee0e777813777c375770092c32c0c9"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>🏯🌸 Hidden Ninja Village in the Misty Mountains A Fantasy World ⛩️🥷✨</h5>
+                                <p>Deep within the emerald-covered mountains of ancient Japan 🇯🇵⛰️ lies a secret
+                                    village cloaked in mist and mystery. This enchanted place is home to legendary
+                                    ninjas 🥷 who train under the whispering bamboo trees 🎍 and meditate beneath a
+                                    sacred waterfall 💧⛲ that glows under moonlight 🌕.
+
+                                    Thatched rooftops peek out from sakura trees 🌸, wooden bridges stretch over
+                                    koi-filled streams 🐟, and paper lanterns float gently through the night sky 🎐🌌.
+                                    The sound of rushing waterfalls echoes like a lullaby, hiding the silent footsteps
+                                    of warriors in the shadows 🗡️🌫️.
+
+                                    Here, fantasy and tradition blend—where dragons may slumber beneath the falls 🐉💤
+                                    and ancient scrolls reveal forgotten powers. Enter this mystical world if you dare…
+                                    but only the silent heart can find it. 🥷🌙🏔️.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://litfind.bookscape.com/wp-content/uploads/2024/05/fantasy-worlds-featured-images-thumbnail.jpg"
+                                class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>🌵✨ The Bloom of Duneveil A New Plant in the Desert Fantasy World 🏜️🌺🌞</h5>
+                                <p>In the heart of a sun-scorched desert, where golden sands dance in the wind 🌬️⏳ and
+                                    ancient ruins whisper lost tales 🏺📜, a mysterious new plant has emerged—the
+                                    Lumafern 🌿💫.
+
+                                    Glowing with bioluminescent petals under the moonlight 🌙🌟 and pulsing with magical
+                                    energy, this plant grows only near enchanted desert springs 🏜️💧 guarded by spirit
+                                    creatures made of sand and starlight 🐪✨🧞.
+
+                                    Its roots run deep, tapping into hidden oases, while its shimmering leaves catch
+                                    whispers from the wind 🌬️🍃. Some say the plant grants visions 🌠, others believe
+                                    it holds the secret to awakening the sleeping dunes 🐉⏳.
+
+                                    Welcome to Duneveil, a world where magic blossoms beneath the burning sun ☀️🔥 and
+                                    the desert breathes life in unexpected places. 🌵🌺🔮
+
+
+
+
+
+
+
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="Card-size">
+        <div class="row row-cols-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://external-preview.redd.it/h6eSuKPF_RUociTYnKodwWtsWknaEkfey2FUlaT6pqY.jpg?auto=webp&s=9532368f9fee0e777813777c375770092c32c0c9"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">🦄💫 Unicorn Dash 🌈</h5>
+                        <p class="card-text">
+                            Zoom through rainbow skies, leap over candy clouds 🍬☁️, and leave trails of sparkle as
+                            magic fills the air! 🌟💖.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
                     </div>
                 </div>
-            <div class="item" id="slide2">
-              <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/symposium1.png?alt=media&token=e22aaa8c-aa1b-42a3-9d29-a7963ab20de9" alt="slide2" />
             </div>
-            <div class="item" id="slide3">
-              <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/symposium2.jpg?alt=media&token=3d8b95af-8c82-4aa5-a25a-c40efa0da885"  alt="slide3" />
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://wallpapers.com/images/featured/fantasy-world-kgck2z03z942tmt4.jpg" width: 100%
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> 🚪✨ Magical Door 🌈🔮</h5>
+                        <p class="card-text">A glowing door hidden in an ancient tree 🌳💫—open it to enter a world of
+                            floating islands 🌍☁️, talking animals 🐿️🗣️, and endless wonder 🌟. One step, and
+                            everything changes… 🚪🌈💖
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
             </div>
-            <div class="item" id="slide4">
-              <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/d3fest2.jpg?alt=media&token=631ac898-55e5-4607-b956-c9afc23292d7" alt="slide4" />
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://i0.wp.com/joncronshaw.com/wp-content/uploads/2023/07/ac25f0b95cb588bde1705b96ca33a4fd68e938ff.jpeg?fit=1200%2C680&ssl=1"
+                        width: 200px; height: 200px; class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vampire Mansion</h5>
+                        <p class="card-text">🏰🦇 Vampire Mansion 🌙🩸
+                            A gothic mansion in the misty woods 🌫️, where candlelight flickers 🕯️, shadows whisper 🖤,
+                            and ancient vampires roam under a blood moon 🌕🔴. Enter… if you dare. 🧛‍♂️✨
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
             </div>
-            <div class="item" id="slide5">
-              <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/IMG-20230425-WA0033.jpg?alt=media&token=070928e4-83df-4efd-a2ce-7780d3ce3b65" alt="slide5" />
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="Card-size">
+        <div class="row row-cols-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://www.slashfilm.com/img/gallery/the-wizarding-world-of-harry-potter-details-concept-art-videos-revealed/intro-import.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> :
+                            🏰🧙‍♂️ Hogwarts – Harry Potter’s Magical World ✨🪄
+                        </h5>
+                        <p class="card-text">
+                            A spellbinding castle where wands choose wizards 🪄🧑‍🎓, staircases move on their own 🌀,
+                            and magic lives in every corner 🌟📚. Fly on broomsticks 🧹, brew potions ⚗️, and uncover
+                            secrets hidden in enchanted halls 🏰🔍. Welcome to the world where magic is real! ⚡🦉.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
             </div>
-            <div class="item" id="slide6">
-              <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/innovateodisha.jpg?alt=media&token=6321fbe6-f1d9-49c7-9c74-2c6b6a721ed6" alt="slide6" />
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://wallpapersok.com/images/hd/underwater-world-with-whales-and-mermaid-wx595dm4m8mfuvj3.jpg"
+                        width: 100% class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Mermaid World</h5>
+                        <p class="card-text">🧜‍♀️🌊 **Mermaid World – A Deep Sea Fantasy** 🐚✨
+                            Dive into an underwater paradise where mermaids sing beneath glowing coral reefs 🐠🎶,
+                            dolphins dance in crystal waves 🐬💎, and treasures sparkle in sunken caves 💖🏝️. A magical
+                            ocean realm awaits beneath the tide! 🌊🌈🧜‍♀️
+
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="buttons" >
-            <i onclick="slider('slide1')" class="" aria-hidden="true">o</i>
-            <i onclick="slider('slide2')" class="" aria-hidden="true">o</i>
-            <i onclick="slider('slide3')" class="" aria-hidden="true">o</i>
-            <i onclick="slider('slide4')" class="" aria-hidden="true">o</i>
-            <i onclick="slider('slide5')" class="" aria-hidden="true">o</i>
-            <i onclick="slider('slide6')" class="" aria-hidden="true">o</i>
-          </div>
-        </section> -->
-    </header>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://w0.peakpx.com/wallpaper/730/908/HD-wallpaper-dragon-world-world-fantasy-dragon-light.jpg"
+                        width: 200px; height: 200px; class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">drangon fantasy world</h5>
+                        <p class="card-text">🐉🔥 **Dragon Fantasy World** 🌋✨
+                            Soar through fiery skies with mighty dragons 🐉⚡, guard ancient treasures in hidden caves
+                            💰⛰️, and roam kingdoms where magic burns bright 🔥🏰. A land of legends, fire, and fearless
+                            flight awaits! 🌪️🌟
 
-    <section id="home">
-      <div class="content-container">
-        <div class="text-content">
-          <h2>
-            I am <br />
-            <a href="https://git.io/typing-svg">
-              <img
-                src="https://readme-typing-svg.demolab.com?font=Pixelify+Sans&size=40&pause=1000&color=8742F5&background=1E27DC00&random=false&width=340&lines=Rajeev;Android+Developer+;Web+Developer+;Chess+Player+"
-                alt="Typing SVG"
-              />
-            </a>
-          </h2>
 
-          <p>Hey there! Android Studio is using me!</p>
-          <p>
-            I excel in Android app development, Bluetooth Low Energy (BLE),
-            image processing, and web development. I’m always interested in
-            building cutting-edge Android applications, delving into IoT
-            applications in BLE, and harnessing the power of image processing
-            algorithms. My skills have been highlighted with remarkable
-            achievements, including winning the Symposium 2023 at ITER and
-            winning the GeeksforGeeks hackathon held at IIIT BBSR.
-          </p>
-          <a
-            href="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/certificates%2FRajeev-kumar-Behera-73.pdf?alt=media&token=56854e39-bc74-4786-8ee8-3c1d9c55b363"
-            download="Rajeev_Resume.pdf"
-          >
-            <button id="btn">Download Resume</button>
-          </a>
-        </div>
-
-        <div class="image-container-wrapper">
-          <div class="image-container" id="rightSlideImage">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/profile.png?alt=media&token=c0d8808f-3fbb-4010-80e8-2570579a48df"
-              alt="Your Image"
-            />
-          </div>
-          <div class="image-text">
-            <p
-              style="
-                color: hsl(0, 0%, 100%);
-                font-size: 25px;
-                font-weight: bold;
-                margin-bottom: 10px;
-              "
-            >
-              Rajeev Kumar Behera<b
-                style="color: rgb(245, 122, 77); font-size: 28px"
-                >;</b
-              >
-            </p>
-            <p style="color: #8742f5; font-size: 15px; margin: 0">
-              Software Developer
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="proHead">
-      <p class="sheading">
-        Projects<b class="semicolon">;</b>
-        <span
-          style="
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 10%;
-            height: 6px;
-            background-color: #6c1fe8;
-          "
-        ></span>
-      </p>
-    </section>
-    <section id="projects" class="project">
-      <div class="project-container">
-        <div class="project1">
-          <a
-            href="https://github.com/yesiamrajeev/sentenix-proto-1"
-            target="_blank"
-          >
-            <img
-              src="./imgproject/sentinexpro.png"
-              class="proimg"
-              alt="Project Image"
-            />
-          </a>
-          <div class="project-text1">
-            <p>Sentinex</p>
-          </div>
-        </div>
-
-        <div class="project2">
-          <a
-            href="https://github.com/yesiamrajeev/FaceDetection_Prototype3"
-            target="_blank"
-          >
-            <img
-              src="./imgproject/facepro.png"
-              width="15%"
-              height="15%"
-              class="proimg"
-              alt="Project Image"
-            />
-          </a>
-          <div class="project-text2">
-            <p>Face Recognition</p>
-          </div>
-        </div>
-
-        <!-- <div class="project3">
-              <a href="https://github.com/example/project2" target="_blank">
-                  <img src="./imgproject/Screenshot 2023-11-29 000733.png" width="15%" height="15%" class="proimg" alt="Project Image">
-              </a>
-              <div class="project-text3">
-                  <p>Project3</p>
-              </div>
-          </div>
-      
-          <div class="project4">
-              <a href="https://github.com/example/project3" target="_blank">
-                  <img src="./imgproject/Screenshot 2023-11-29 000733.png" width="15%" height="15%" class="proimg" alt="Project Image">
-              </a>
-              <div class="project-text4">
-                  <p>Project4</p>
-              </div>
-          </div> -->
-      </div>
-    </section>
-
-    <section class="project">
-      <div class="project-container">
-        <div class="project3">
-          <a
-            href="https://github.com/hacktoberfest-codex/YATRA360"
-            target="_blank"
-          >
-            <img
-              src="./imgproject/yatra360.png"
-              width="15%"
-              height="15%"
-              class="proimg"
-              alt="Project Image"
-            />
-          </a>
-          <div class="project-text3">
-            <p>Yatra 360</p>
-          </div>
-        </div>
-
-        <div class="project4">
-          <a href="https://github.com/yesiamrajeev/BLE-Scanner" target="_blank">
-            <img
-              src="./imgproject/scanner2.png"
-              width="15%"
-              height="15%"
-              class="proimg"
-              alt="Project Image"
-            />
-          </a>
-          <div class="project-text4">
-            <p>BLE Scanner</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="achivements" class="hero">
-      <p class="Aheading">
-        Achivements<b class="semicolon">;</b>
-        <span
-          style="
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 15%;
-            height: 6px;
-            background-color: #6c1fe8;
-          "
-        ></span>
-      </p>
-      <div class="achivements-container">
-        <div class="a1">
-          <div class="achievement-card">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/symposium1.png?alt=media&token=e22aaa8c-aa1b-42a3-9d29-a7963ab20de9"
-              style="object-fit: cover"
-              alt="Project Image"
-            />
-            <div class="text">
-              <h2>
-                Symposium 2023 Winner<b
-                  style="color: rgb(245, 122, 77); font-size: 28px"
-                  >;</b
-                >
-              </h2>
-              <p>
-                We are thankful that our amazing project Yatra 360 won Symposium
-                2023 at ITER! Our innovative implementation of CBIR and QBE for
-                indoor navigation systems, complete with advanced 3D image
-                mapping, has captured the attention of scholars and received top
-                honors in a stiff competition. <br />
-                <br />
-                The 6-hour event demonstrated our commitment, culminating in an
-                impressive performance that earned us appreciation from the
-                esteemed faculty, Additional Dean of ITER We are delighted to be
-                recognized for our hard work and honored to have stood tall in
-                the top 3 teams in our division!
-              </p>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+    </div>
 
-        <div class="a2">
-          <div class="achievement-card">
-            <div class="text">
-              <h2>
-                D<sup>3</sup> Fest Hackathon Winner 2023<b
-                  style="color: rgb(245, 122, 77); font-size: 28px"
-                  >;</b
-                >
-              </h2>
-              <p>
-                "Patrologix" my team, won The Geek O Thon, a 24-hour intense
-                hackathon by GeeksforGeeks and IIIT Bhubanswar at D3fest 2023!
-                During our trip, a winning prototype was produced within 24
-                hours to earn a spot in the final round. The grand finale
-                allowed us to refine our project presentation skills, and
-                present our new ideas to esteemed judges. <br />
-                <br />
-                Sincere thanks to our teammates Sohan Mohanty, Dharmesh Raj and
-                Yajy Goswami (aka DevOps God) for playing an important role in our victory. Our
-                project that empowers communities for security and connectivity.
-              </p>
-            </div>
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/D3fest.jpeg?alt=media&token=7271560b-0049-4a11-b737-2b22ee084fd9"
-              style="object-fit: cover"
-              alt="Project Image"
-            />
-          </div>
-        </div>
 
-        <div class="a3">
-          <div class="achievement-card">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/DSC_1434.png?alt=media&token=caf720e5-1577-4a9c-a633-b26d6a8d9369"
-              style="object-fit: cover"
-              alt="Project Image"
-            />
-            <div class="text">
-              <h2>
-                iFlashers<b style="color: rgb(245, 122, 77); font-size: 28px"
-                  >;</b
-                >
-              </h2>
-              <p>
-                In this dynamic visualization, iFlashers unveils its
-                sophisticated indoor navigation service, bypassing the
-                limitations of traditional GPS and the internet, using Bluetooth
-                beacons for real-time location tracking When needed yi Executive
-                Chairman of Startup Odisha Omkar Rai interacts with iFlashers.
-                As India's former DG of Software Technology Parks and a
-                technologist, Omkar Rai expresses appreciation, urging the team
-                to "keep working". <br />
-                <br />Image Software Products features the passion and
-                credentials of Omkar Rai, a leading national advocate for
-                iFlashers. This is a major milestone, where a prominent industry
-                leader has embraced their vision.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div class="a4">
-          <div class="achievement-card">
-            <div class="text">
-              <h2>
-                InnovateOdisha Hackathon<b
-                  style="color: rgb(245, 122, 77); font-size: 28px"
-                  >;</b
-                >
-              </h2>
-              <p>
-                Our team participated in the InnovateOdisha Hackathon, organized
-                by NIT BBSR and Karkhana. It was an incredible experience where
-                we spent 24 hours non-stop coding and developing our project. We
-                worked on an indoor navigation app using BLE technology and
-                received valuable feedback and suggestions for improvement. The
-                event was a fantastic opportunity to innovate, collaborate, and
-                showcase our skills.
-              </p>
-            </div>
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/innovateodisha%20(1).jpg?alt=media&token=f19d8274-ae91-41cc-91b7-2aa3c5d93219"
-              style="object-fit: cover"
-              alt="Project Image"
-            />
-          </div>
-        </div>
 
-        <div class="a3">
-          <div class="achievement-card">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/WhatsApp%20Image%202024-04-27%20at%2022.43.57_bb70b429.jpg?alt=media&token=d5bbec97-d744-48a2-be95-befacea4b977"
-              style="object-fit: cover"
-              alt="Project Image"
-            />
-            <div class="text">
-              <h2>
-                SOA Proxima 2024<b
-                  style="color: rgb(245, 122, 77); font-size: 28px"
-                  >;</b
-                >
-              </h2>
-              <p>
-                Team Patrologix is proud to introduce Sentinex, an innovative
-                project that was born out of resilience and unity, with the goal
-                of enhancing community safety. It all started with a triumphant
-                win at the hackathon hosted by IIIT Bhubaneswar. Since then,
-                Sentinex has continued to evolve, thanks to platforms like
-                Vimarsh & Nirman, which have played a crucial role in refining
-                its impact.
-                <br />
-                The support and guidance of Prof. Anukampa Behera, along with
-                the recognition received at SOA Proxima, have further validated
-                Sentinex's potential to revolutionize community security. It has
-                garnered unanimous praise for its ability to make a real
-                difference in society.
-                <br />
-                This journey has been characterized by unwavering perseverance
-                and well-deserved recognition, which truly exemplify
-                Patrologix's unwavering commitment to innovation and making a
-                positive impact on society.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- <div class="a1">
-                                    <div class="a-text1">
-                                        <p>We are thankful that our amazing project Yatra 360 won Symposium 2023 at ITER! Our innovative implementation of CBIR and QBE 
-                                          for indoor navigation systems, complete with advanced 3D image mapping, has captured the attention of scholars and received top 
-                                          honors in a stiff competition. <br> <br> The 6-hour event demonstrated our commitment, culminating in an impressive performance that 
-                                          earned us appreciation from the esteemed faculty, Additional Dean of ITER We are delighted to be recognized for our hard work 
-                                          and honored to have stood tall in the top 3 teams in our division!</p>
-                                          
-                                    </div>
-                                      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/symposium1.png?alt=media&token=e22aaa8c-aa1b-42a3-9d29-a7963ab20de9"  style="object-fit: cover;" class="proimg2" alt="Project Image">
-                              </div>
-              
-                              <div class="a2">
-                                      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/d3.jpg?alt=media&token=d0531982-a19e-40ae-9528-fd4311846f92" width="15%" height="15%" class="proimg3" alt="Project Image">
-                                  <div class="a-text2" style="padding-top: 1px;">
-                                      <p>"Patrologix" my team, won The Geek O Thon, a 24-hour intense hackathon by GeeksforGeeks and IIIT Bhubanswar at D3fest 2023!
-                                        During our trip, a winning prototype was produced within 24 hours to earn a spot in the final round. The grand finale allowed us to
-                                        refine our project presentation skills, and present our new ideas to esteemed judges. <br> <br>
-                                        Sincere thanks to our teammates Sohan Mohanty, Dharmesh Raj and Yajy Goswami for playing an important role in our victory. Our project that empowers communities for
-                                          security and connectivity.</p>
-                                  </div>
-                              </div>
-      
-                              <div class="a3">
-                                <div class="a-text3">
-                                  <p>In this dynamic visualization, iFlashers unveils its sophisticated indoor navigation service, bypassing the limitations
-                                    of traditional GPS and the internet, using Bluetooth beacons for real-time location tracking When needed yi Executive Chairman of Startup 
-                                    Odisha Omkar Rai interacts with iFlashers. As India's former DG of Software Technology Parks and a technologist, Omkar Rai expresses 
-                                    appreciation, urging the team to "keep working". <br> <br>Image Software Products features the passion and credentials of Omkar Rai, a leading 
-                                    national advocate for iFlashers. This is a major milestone, where a prominent industry leader has embraced their vision.</p>
-                              </div>
-                                      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/DSC_1434.png?alt=media&token=caf720e5-1577-4a9c-a633-b26d6a8d9369" width="15%" height="15%" class="proimg2" alt="Project Image">
-                              </div>
-      
-                              <div class="a4">
-                                      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/innovateodisha%20(1).jpg?alt=media&token=f19d8274-ae91-41cc-91b7-2aa3c5d93219" width="15%" height="15%" class="proimg3" alt="Project Image">
-                                  <div class="a-text4">
 
-                                      <p>Description4</p>
 
-                                  </div>
-                              </div> -->
-      </div>
-    </section>
+    <p class="form-center text-white">
+        When submitting the Your Home, You like most
+    <form id="password-form" class="form-in">
+        <input type="name" id="password-input" placeholder="Enter your Theme ">
+        <input type="submit" value="Selected">
+    </form>
+    </p>
 
-    <section id="skills">
-      <div class="card animate-on-scroll">
-        <img
-          src="https://www.python.org/static/community_logos/python-logo-generic.svg"
-          alt="Python Logo"
-          class="logo"
-        />
-        <h3>Python</h3>
-      </div>
 
-      <div class="card animate-on-scroll">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/skills%2FAndroid_robot_(2014-2019).svg.png?alt=media&token=35d20daf-0310-45c8-8405-2a424b10c387"
-          alt="Android Logo"
-          class="logo"
-        />
-        <h3>Android</h3>
-      </div>
 
-      <div class="card animate-on-scroll">
-        <img
-          src="https://firebase.google.com/images/brand-guidelines/logo-vertical.png"
-          alt="Firebase Logo"
-          class="logo"
-        />
-        <h3>Firebase</h3>
-      </div>
 
-      <div class="card animate-on-scroll">
-        <img
-          src="https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png"
-          alt="GitLab Logo"
-          class="logo"
-        />
-        <h3>GitLab</h3>
-      </div>
 
-      <div class="card animate-on-scroll">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/skills%2FVisual_Studio_Icon_2022.svg.png?alt=media&token=54b70743-1c45-4cca-81b4-435ce8186dff"
-          alt="Visual Studio Code Logo"
-          class="logo"
-        />
-        <h3>Visual Studio Code</h3>
-      </div>
 
-      <div class="card animate-on-scroll">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/skills%2FEclipse-Luna-Logo.svg.png?alt=media&token=8eca16e1-56cf-4bc6-8f46-7a052051e6d4"
-          alt="Eclipse Logo"
-          class="logo"
-        />
-        <h3>Eclipse</h3>
-      </div>
 
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cloud.google.com/images/social-icon-google-cloud-1200-630.png"
-          alt="GCP Logo"
-          class="logo"
-        />
-        <h3>GCP</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/skills%2F800px-Figma-logo.svg.png?alt=media&token=a8e44a31-b677-4f96-8d71-7ab601e6c168"
-          alt="Figma Logo"
-          class="logo"
-        />
-        <h3>Figma</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/skills%2FAndroid_Studio_Logo_(2023).svg.png?alt=media&token=65b38acb-0e46-4d93-9c7c-04ff2a1b6460"
-          alt="Android Studio Logo"
-          class="logo"
-        />
-        <h3>Android Studio</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
-          alt="Node.js Logo"
-          class="logo"
-        />
-        <h3>Node.js</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/java-4.svg"
-          alt="Java Logo"
-          class="logo"
-        />
-        <h3>Java</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="imgproject\FlaskLogo.jpeg"
-          alt="Flask Logo"
-          class="logo"
-        />
-        <h3>Flask</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
-          alt="React Logo"
-          class="logo"
-        />
-        <h3>React</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img src="imgproject\Kotlin Logo.png" alt="Kotlin Logo" class="logo" />
-        <h3>Kotlin</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/github-icon.svg"
-          alt="GitHub Logo"
-          class="logo"
-        />
-        <h3>GitHub</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/c.svg"
-          alt="C Logo"
-          class="logo"
-        />
-        <h3>C</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/c--4.svg"
-          alt="C++ Logo"
-          class="logo"
-        />
-        <h3>C++</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/portfolio-2a7b9.appspot.com/o/skills%2FMySQL_logo.svg.png?alt=media&token=8bbafd45-ce14-424b-8249-7e7c853ce4f5"
-          alt="MySQL Logo"
-          class="logo"
-        />
-        <h3>MySQL</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/ubuntu-2.svg"
-          alt="Ubuntu Logo"
-          class="logo"
-        />
-        <h3>Ubuntu</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg"
-          alt="Bootstrap Logo"
-          class="logo"
-        />
-        <h3>Bootstrap</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
-          alt="JavaScript Logo"
-          class="logo"
-        />
-        <h3>JavaScript</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/git-icon.svg"
-          alt="Git Logo"
-          class="logo"
-        />
-        <h3>Git</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/html5-2.svg"
-          alt="HTML Logo"
-          class="logo"
-        />
-        <h3>HTML</h3>
-      </div>
-
-      <div class="card animate-on-scroll">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/css-3.svg"
-          alt="CSS Logo"
-          class="logo"
-        />
-        <h3>CSS</h3>
-      </div>
-    </section>
-
-    <section>
-      <div class="tictac-content" id="tictac">
-        <h1>
-          Beat me at this<b style="color: rgb(245, 122, 77); font-size: 28px"
-            >;</b
-          >
-        </h1>
-        <button onclick="startGame()">Start Game</button>
-        <div class="board" id="board"></div>
-        <p id="turn-info"></p>
-        <script src="./index.js"></script>
-      </div>
-    </section>
 
     <footer>
-     <div class="visitor-counter-container">
-  <div class="visitor-counter">
-    <div class="counter-header">
-      <div class="counter-icon"></div>
-
-    </div>
-    <div class="counter-stats">
-      <div class="stat-item" style="text-align: center;">
-        <img 
-          src="https://hits.sh/github.com/yesiamrajeev/portfolio.svg?style=flat&label=Total%20Visits&extraCount=0&color=f57a4d&labelColor=5c0a0a" 
-          alt="Visitor Counter"
-          style="height: 30px; margin-top: 5px;">
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
-      <section id="contact">
-        <div class="contact-container">
-          <div class="contact-header">
-            <p class="sheading">
-              Contact Me<b class="semicolon">;</b>
-              <span
-                style="
-                  position: absolute;
-                  bottom: -10px;
-                  left: 0;
-                  width: 15%;
-                  height: 6px;
-                  background-color: #6c1fe8;
-                "
-              ></span>
-            </p>
-            <p class="contact-subtitle">
-              Ready to start your next project? Let's build something amazing
-              together!
-            </p>
-          </div>
-
-          <div class="contact-content">
-            <div class="contact-info">
-              <div class="info-card">
-                <div class="info-icon">
-                  <i class="fa fa-envelope"></i>
+        <div class="footer-change">
+            <div class="card text-center  bg-transparent">
+                <div class="card-header text-white">
+                    If you have choose one Theme from above select one !
                 </div>
-                <h3>Email Me</h3>
-                <p>rajeev.220077@gmail.com</p>
-              </div>
 
-              <div class="info-card">
-                <div class="info-icon">
-                  <i class="fa fa-code"></i>
+                <div class="card-body text-white ">
+                    <h5 class="card-title">A golden chance to live in imagination</h5>
+                    <p class="card-text text-white"> project made by Adiba Naushad With Love and additional sweet
+                        content.</p>
+                    <a href="#" class="btn btn-primary bg-dark">Go somewhere</a>
                 </div>
-                <h3>Specialization</h3>
-                <p>Android & Web Development</p>
-              </div>
-
-              <div class="info-card">
-                <div class="info-icon">
-                  <i class="fa fa-clock-o"></i>
+                <div class="card-footer text-body-secondary">
+                    2 days ago
                 </div>
-                <h3>Response Time</h3>
-                <p>Within 24 hours</p>
-              </div>
             </div>
-
-            <div class="contact-form-wrapper">
-              <div id="contactForm1">
-                <form action="" id="contactForm">
-                  <div class="alert">
-                    <i class="fa fa-check-circle"></i>
-                    <span>Your message has been sent successfully!</span>
-                  </div>
-                  <div class="success-alert">
-                    <i class="fa fa-check-circle"></i>
-                    <span>Message sent successfully!</span>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="inputBox">
-                      <input type="text" id="name" placeholder=" " required />
-                      <label for="name">Full Name</label>
-                      <span class="input-border"></span>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="inputBox">
-                      <input
-                        type="email"
-                        id="emailid"
-                        placeholder=" "
-                        required
-                      />
-                      <label for="emailid">Email Address</label>
-                      <span class="input-border"></span>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <div class="inputBox">
-                      <textarea
-                        id="msgContent"
-                        rows="6"
-                        placeholder=" "
-                        required
-                      ></textarea>
-                      <label for="msgContent">Your Message</label>
-                      <span class="input-border"></span>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <button type="submit" class="submit-btn">
-                      <span class="btn-text">Send Message</span>
-                      <i class="fa fa-paper-plane btn-icon"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          <div class="social-section">
-            <h3 class="social-title">Follow Me On</h3>
-            <div class="social-links">
-              <a
-                href="https://www.linkedin.com/in/rajeev-kumar-behera-36403428b/"
-                class="social-link linkedin"
-                title="LinkedIn"
-              >
-                <i class="fa fa-linkedin"></i>
-                <span class="social-text">LinkedIn</span>
-              </a>
-              <a
-                href="https://github.com/yesiamrajeev"
-                class="social-link github"
-                title="GitHub"
-              >
-                <i class="fa fa-github"></i>
-                <span class="social-text">GitHub</span>
-              </a>
-              <a
-                href="mailto:rajeev.220077@gmail.com"
-                class="social-link email"
-                title="Email"
-              >
-                <i class="fa fa-envelope"></i>
-                <span class="social-text">Email</span>
-              </a>
-              <a
-                href="https://www.instagram.com/yes._.i._.am/"
-                class="social-link instagram"
-                title="Instagram"
-              >
-                <i class="fa fa-instagram"></i>
-                <span class="social-text">Instagram</span>
-              </a>
-            </div>
-          </div>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
-        <script defer>
-          const firebaseConfig = {
-            apiKey: "",
-            authDomain: "",
-            databaseURL: "",
-            projectId: "",
-            storageBucket: "",
-            messagingSenderId: "",
-            appId: "",
-            measurementId: "",
-          };
-          if (!firebase.apps.length) {
-            firebase.initializeApp(firebaseConfig);
-          }
 
-          var contactFormDB = firebase.database().ref("contactForm");
 
-          document.addEventListener("DOMContentLoaded", function () {
-            document
-              .getElementById("contactForm")
-              .addEventListener("submit", submitForm);
-          });
 
-          function submitForm(e) {
-            e.preventDefault();
 
-            var name = getElementVal("name");
-            var emailid = getElementVal("emailid");
-            var msgContent = getElementVal("msgContent");
-
-            if (name && emailid && msgContent) {
-              saveMessages(name, emailid, msgContent);
-
-              document.querySelector(".alert").classList.add("show");
-
-              setTimeout(() => {
-                document.querySelector(".alert").classList.remove("show");
-              }, 3000);
-
-              document.getElementById("contactForm").reset();
-            } else {
-              alert("Please fill in all fields.");
-            }
-          }
-
-          const saveMessages = (name, emailid, msgContent) => {
-            var newContactForm = contactFormDB.push();
-
-            newContactForm.set({
-              name: name,
-              emailid: emailid,
-              msgContent: msgContent,
-            });
-          };
-
-          const getElementVal = (id) => {
-            return document.getElementById(id).value;
-          };
-
-          // Enhanced form animations and interactions
-          document.addEventListener("DOMContentLoaded", function () {
-            // Add floating label animation
-            const inputs = document.querySelectorAll(
-              "#contactForm input, #contactForm textarea"
-            );
-
-            inputs.forEach((input) => {
-              input.addEventListener("blur", function () {
-                if (this.value !== "") {
-                  this.classList.add("filled");
-                } else {
-                  this.classList.remove("filled");
-                }
-              });
-            });
-
-            // Add button loading state
-            const submitBtn = document.querySelector(".submit-btn");
-            const btnText = submitBtn.querySelector(".btn-text");
-            const btnIcon = submitBtn.querySelector(".btn-icon");
-
-            document
-              .getElementById("contactForm")
-              .addEventListener("submit", function () {
-                submitBtn.disabled = true;
-                btnText.textContent = "Sending...";
-                btnIcon.className = "fa fa-spinner fa-spin btn-icon";
-
-                setTimeout(() => {
-                  submitBtn.disabled = false;
-                  btnText.textContent = "Send Message";
-                  btnIcon.className = "fa fa-paper-plane btn-icon";
-                }, 2000);
-              });
-
-            // Add smooth scroll animation for contact section
-            const contactLinks =
-              document.querySelectorAll('a[href="#contact"]');
-            contactLinks.forEach((link) => {
-              link.addEventListener("click", function (e) {
-                e.preventDefault();
-                document.getElementById("contact").scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-              });
-            });
-          });
-        </script>
-      </section>
-      <p>&copy; Rajeev 28</p>
     </footer>
 
-    <div id="custom-alert" class="alert-modal">
-      <div class="alert-overlay"></div>
-      <div class="alert-content">
-        <div class="alert-icon" id="alert-icon">🏆</div>
-        <div class="alert-message" id="alert-message">You Win!</div>
-        <div class="alert-subtext">Game will restart shortly...</div>
-        <div class="alert-decoration">
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-top-btn" title="Back to Top">
-      <i class="fa fa-chevron-up"></i>
-    </button>
-  </body>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+
+    <script>
+        function password(event) {
+            event.preventDefault();
+            let searchInput = document.querySelector("#password-input");
+            alert("👩‍💻 Your Home is selected ! in " + "* " + searchInput.value + " * "+ " pack your Bag❤️");
+        }
+
+        let form = document.querySelector("#password-form");
+        form.addEventListener("submit", password);
+    </script>
+
+</body>
+
+
 </html>
